@@ -1,28 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <Navigation />
+
+      <div class="columns is-marginless">
+        <div class="column is-one-quarter">
+          <Sidebar class="menu sticky" />
+        </div>
+        <div class="column">
+          <Section />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navigation from "./components/Navigation";
+import Sidebar from "./components/Sidebar";
+import Section from "./components/Section";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    Navigation,
+    Sidebar,
+    Section
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.sticky {
+  position: sticky;
+  top: 30px;
 }
 </style>
