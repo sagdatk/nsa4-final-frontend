@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <h1 class="title">Available exams</h1>
-    <Test v-for="test in tests" :key="test._id" :test="test"/>
+    <div id="tests">
+        <Test v-for="test in tests" :key="test._id" :test="test"/>
+    </div>
   </div>
 </template>
 
@@ -28,5 +30,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+#tests {
+    display: flex;
+    align-items: stretch;
+}
 </style>

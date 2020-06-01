@@ -1,7 +1,7 @@
 <template>
   <div class="card" @click="opentest()">
     <div class="card-image">
-      <figure class="image is-4by3">
+      <figure class="image">
         <img :src="imageUrl" alt="Placeholder image" />
       </figure>
     </div>
@@ -28,5 +28,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+img {
+    width: 300px;
+    height: 200px;
+}
 </style>
