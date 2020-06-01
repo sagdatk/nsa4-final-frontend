@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="title">Математика</h1>
+    <h1 class="title">{{ topic }}</h1>
     <form @submit="submitAnswers">
       <Question v-for="question in questions" :key="question.id" :question="question" />
       <button class="button is-link">Submit</button>
@@ -19,6 +19,7 @@ export default {
   },
   data: function() {
     return {
+      topic: null,
       questions: []
     };
   },
@@ -39,6 +40,7 @@ export default {
   mounted() {
     const id = this.$route.params.id;
     axios.get(`http://localhost:3000/api/tests/${id}`).then(response => {
+      this.topic = response.data.topic;
       this.questions = response.data.questions;
     });
   }

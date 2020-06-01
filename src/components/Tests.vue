@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="title">Доступные тесты</h1>
+    <h1 class="title">Available exams</h1>
     <Test v-for="test in tests" :key="test._id" :test="test"/>
   </div>
 </template>

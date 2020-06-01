@@ -20,24 +20,22 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-      </div>
-
-      <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
-              <strong>Сагдат Амир</strong>
-            </a>
+            <router-link class="button is-primary" to="/tests">Tests</router-link>
+            <router-link class="button is-primary" to="/about">About</router-link>
           </div>
         </div>
       </div>
+
+      <div class="navbar-end"></div>
     </div>
   </nav>
 </template>
 
 <script>
 export default {
-    name: 'Navigation'
+  name: "Navigation"
 };
 </script>
 
